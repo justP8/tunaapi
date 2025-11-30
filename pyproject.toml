@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=80.0", "wheel", "setuptools_scm>=9.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tunaapi"
+readme = "README.md"
+description = 'Simple API for Tuna'
+dependencies = [
+    "anyio~=4.9.0",
+    "certifi~=2025.4.26",
+    "h11~=0.16.0",
+    "httpcore~=1.0.9",
+    "httpx~=0.28.1",
+    "idna~=3.10",
+    "sniffio~=1.3.1",
+]
+requires-python = ">=3.10,<3.15"
+authors = [
+    { name = "alpyxd", email = "prokopevaa08@gmail.com" },
+]
+maintainers = [
+    { name = "alpyxd", email = "prokopevaa08@gmail.com" },
+]
+license = "MIT"
+keywords = ["api", "tuna", "tunaapi"]
+dynamic = ["version"]
+
+[tool.setuptools.packages]
+find = {} # Эквивалент find_packages()
+
+[tool.setuptools_scm]
+write_to = "tunaapi/_version.py"
+version_scheme = "release-branch-semver"
+local_scheme = "dirty-tag"
+
+[project.urls]
+Homepage = "https://github.com/justP8/tunaapi/"
+"Bug Tracker" = "https://github.com/justP8/tunaapi/issues/"
+Repository = "https://github.com/justP8/tunaapi/"
